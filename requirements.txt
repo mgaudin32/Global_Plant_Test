@@ -1,8 +1,0 @@
-pandas
-dash
-dash-core-components
-dash-html-components
-dash-bootstrap-components
-dash-auth
-gunicorn
-plotly
