@@ -6,8 +6,8 @@ import pandas as pd
 import plotly.express as px
 import dash_bootstrap_components as dbc
 from plotly import graph_objs as go
-#import dash_auth
-#from users import VALID_USERNAME_PASSWORD_PAIRS
+import dash_auth
+from users import VALID_USERNAME_PASSWORD_PAIRS
 
 
 df = pd.read_csv("global_power_plant_database.csv")
@@ -16,7 +16,7 @@ countries = df['country_long'].unique()
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
-#auth = dash_auth.BasicAuth(app, VALID_USERNAME_PASSWORD_PAIRS)
+auth = dash_auth.BasicAuth(app, VALID_USERNAME_PASSWORD_PAIRS)
 
 df = pd.read_csv("global_power_plant_database.csv")
 countries = df['country_long'].unique()
